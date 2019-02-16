@@ -1,3 +1,8 @@
 body {
-  background: yellow;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  border: 1px solid grey;
+  width: 350px;
 }
