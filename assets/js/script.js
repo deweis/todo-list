@@ -26,6 +26,14 @@ function appendTodo(todo) {
       .find('i')
       .css('opacity', '0');
   });
+
+  $('li div.trash-icon')
+    .last()
+    .on('click', function(e) {
+      $(this)
+        .parent()
+        .remove();
+    });
 }
 
 // Append the todos to the list
