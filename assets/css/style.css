@@ -4,5 +4,16 @@ body {
 
 .container {
   border: 1px solid grey;
-  width: 350px;
+  max-width: 350px;
+  margin: 100px auto;
+}
+
+h1 {
+  margin: 0;
+  padding: 5px;
+  background: #0277bd; /* light-blue darken-3 */
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.3em;
+  text-align: center;
 }
