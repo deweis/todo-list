@@ -3,17 +3,44 @@ body {
 }
 
 .container {
-  border: 1px solid grey;
   max-width: 350px;
   margin: 100px auto;
 }
 
 h1 {
   margin: 0;
-  padding: 5px;
+  padding: 7px 10px;
   background: #0277bd; /* light-blue darken-3 */
   color: #fff;
   font-weight: normal;
-  font-size: 1.3em;
-  text-align: center;
+  font-size: 1.2em;
+  box-sizing: border-box;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #bdbdbd; /* grey lighten-1 */
+  background: #eeeeee; /* grey lighten-3 */
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li:nth-child(even) {
+  background: #eeeeee; /* grey lighten-3 */
+}
+
+li {
+  list-style: none;
+  width: 100%;
+  padding: 5px 10px;
+  color: #424242; /* grey darken-3 */
+  box-sizing: border-box;
+  font-size: 0.8em;
 }
