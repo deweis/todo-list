@@ -4,35 +4,44 @@ function appendTodo(todo) {
   $('ul').append(
     `<li><div class="trash-icon"><i class="far fa-trash-alt"></i></div><div class="todo">${todo}</div></li>`
   );
+  addClickListeners();
+  addMouseListeners();
+}
 
+function addClickListeners() {
   $('li div.todo')
     .last()
     .on('click', function(e) {
       $(this).toggleClass('done');
     });
-
-  $('li').on('mouseenter', function() {
-    $(this)
-      .children(':first')
-      .css('width', '30px')
-      .find('i')
-      .css('opacity', '1');
-  });
-
-  $('li').on('mouseleave', function() {
-    $(this)
-      .children(':first')
-      .css('width', '0')
-      .find('i')
-      .css('opacity', '0');
-  });
-
   $('li div.trash-icon')
     .last()
     .on('click', function(e) {
       $(this)
         .parent()
         .remove();
+    });
+}
+
+function addMouseListeners() {
+  $('li')
+    .last()
+    .on('mouseenter', function() {
+      $(this)
+        .children(':first')
+        .css('width', '30px')
+        .find('i')
+        .css('opacity', '1');
+    });
+
+  $('li')
+    .last()
+    .on('mouseleave', function() {
+      $(this)
+        .children(':first')
+        .css('width', '0')
+        .find('i')
+        .css('opacity', '0');
     });
 }
 
