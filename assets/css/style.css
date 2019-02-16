@@ -38,12 +38,30 @@ ul li:nth-child(even) {
 
 li {
   list-style: none;
-  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.trash-icon {
+  background: red;
+  color: white;
+  width: 0;
+  text-align: center;
+  transition: 0.8s ease;
+  padding: 5px 0;
+}
+
+.fa-trash-alt {
+  opacity: 0;
+  transition: opacity 0.8s;
+}
+
+.todo {
   padding: 5px 10px;
   color: #424242; /* grey darken-3 */
-  box-sizing: border-box;
   font-size: 0.8em;
-  cursor: pointer;
+  flex-grow: 1;
 }
 
 .done {
