@@ -43,6 +43,7 @@ li {
   color: #424242; /* grey darken-3 */
   box-sizing: border-box;
   font-size: 0.8em;
+  cursor: pointer;
 }
 
 .done {
