@@ -1,4 +1,12 @@
-todos = ['Task 1', 'Task 2', 'Task 3', 'Task 4', 'Task 5', 'Task 6'];
+todos = [
+  'Add toggle input icon with functionality',
+  'Add Background',
+  'Check on different pointer formats',
+  'jQuery: on, keypress, fades, slides, selecting',
+  'CSS: Margin, Padding, Float, Fonts',
+  'jQuery: parent, append, create element, event delegation',
+  'CSS: font-awesome, box-shadow, transition, gradients'
+];
 
 function appendTodo(todo) {
   $('ul').append(
@@ -49,6 +57,10 @@ function addMouseListeners() {
 todos.forEach(x => appendTodo(x));
 
 // Add a new task
+$('input').on('click', function(e) {
+  $(this).css('color', 'blue');
+});
+
 $('input').on('keypress', function(e) {
   var code = e.keyCode || e.which;
   if (code === 13) {
