@@ -1,5 +1,4 @@
 todos = [
-  'Check on different pointer formats',
   'jQuery: fades, slides',
   'CSS: Margin, Padding, Float',
   'jQuery: create element, event delegation',

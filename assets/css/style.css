@@ -51,7 +51,7 @@ ul li:nth-child(odd) {
 
 li {
   list-style: none;
-  cursor: pointer;
+  cursor: auto;
   display: flex;
   align-items: center;
 }
@@ -63,6 +63,7 @@ li {
   text-align: center;
   transition: 0.8s ease;
   padding: 5px 0;
+  cursor: pointer;
 }
 
 .fa-trash-alt {
