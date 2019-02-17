@@ -1,5 +1,5 @@
 todos = [
-  'jQuery: fades, slides',
+  'jQuery: slides',
   'CSS: Margin, Padding, Float',
   'jQuery: create element, event delegation',
   'CSS: box-shadow, transition'
@@ -70,5 +70,5 @@ $('input').on('keypress', function(e) {
 
 // Toggle Input field
 $('.input-toggle').on('click', function(e) {
-  $('input').toggle();
+  $('input').fadeToggle(200);
 });
