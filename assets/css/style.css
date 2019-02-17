@@ -1,5 +1,10 @@
 body {
   font-family: 'Roboto', sans-serif;
+  background-image: linear-gradient(
+    to right,
+    #26a69a,
+    #03a9f4
+  ); /* teal lighten-1 ..  light-blue */
 }
 
 .container {
@@ -33,6 +38,9 @@ ul {
 
 ul li:nth-child(even) {
   background: #eeeeee; /* grey lighten-3 */
+}
+ul li:nth-child(odd) {
+  background: #fff;
 }
 
 li {

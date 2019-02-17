@@ -1,6 +1,5 @@
 todos = [
   'Add toggle input icon with functionality',
-  'Add Background',
   'Check on different pointer formats',
   'jQuery: on, keypress, fades, slides, selecting',
   'CSS: Margin, Padding, Float, Fonts',
