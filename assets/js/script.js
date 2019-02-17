@@ -1,10 +1,9 @@
 todos = [
-  'Add toggle input icon with functionality',
   'Check on different pointer formats',
-  'jQuery: on, keypress, fades, slides, selecting',
-  'CSS: Margin, Padding, Float, Fonts',
-  'jQuery: parent, append, create element, event delegation',
-  'CSS: font-awesome, box-shadow, transition, gradients'
+  'jQuery: fades, slides',
+  'CSS: Margin, Padding, Float',
+  'jQuery: create element, event delegation',
+  'CSS: box-shadow, transition'
 ];
 
 function appendTodo(todo) {
@@ -68,4 +67,9 @@ $('input').on('keypress', function(e) {
     appendTodo(todo);
     $('input').val('');
   }
+});
+
+// Toggle Input field
+$('.input-toggle').on('click', function(e) {
+  $('input').toggle();
 });

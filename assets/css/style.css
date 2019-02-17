@@ -22,6 +22,12 @@ h1 {
   box-sizing: border-box;
 }
 
+.input-toggle {
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
 input {
   width: 100%;
   border: none;
