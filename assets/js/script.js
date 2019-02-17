@@ -72,4 +72,6 @@ $('.input-toggle').on('click', function(e) {
   // $('input').slideToggle(500);
   $('input').fadeToggle(700);
   $('.input-container').slideToggle(800);
+  $('.input-toggle i').toggleClass('fa-minus');
+  $('.input-toggle i').toggleClass('fa-plus');
 });
