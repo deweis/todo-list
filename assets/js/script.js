@@ -6,9 +6,10 @@ $('ul').on('click', 'li div.todo', function(e) {
 });
 
 $('ul').on('click', 'li div.trash-icon', function(e) {
+  e.stopPropagation(); // so event is not propagated up the chain
   $(this)
     .parent()
-    .remove();
+    .fadeOut(400, () => $(this).remove());
 });
 
 // Add mouse listener on ul using event delegation
