@@ -6,7 +6,7 @@ todos = [
   'task 4'
 ];
 
-// Add click listeners
+// Add click listener on ul using event delegation
 $('ul').on('click', 'li div.todo', function(e) {
   $(this).toggleClass('done');
 });
@@ -17,33 +17,28 @@ $('ul').on('click', 'li div.trash-icon', function(e) {
     .remove();
 });
 
+// Add mouse listener on ul using event delegation
+$('ul').on('mouseenter', 'li', function() {
+  $(this)
+    .children(':first')
+    .css('width', '30px')
+    .find('i')
+    .css('opacity', '1');
+});
+
+$('ul').on('mouseleave', 'li', function() {
+  $(this)
+    .children(':first')
+    .css('width', '0')
+    .find('i')
+    .css('opacity', '0');
+});
+
+// append a todo to the ul
 function appendTodo(todo) {
   $('ul').append(
     `<li><div class="trash-icon"><i class="far fa-trash-alt"></i></div><div class="todo">${todo}</div></li>`
   );
-  addMouseListeners();
-}
-
-function addMouseListeners() {
-  $('li')
-    .last()
-    .on('mouseenter', function() {
-      $(this)
-        .children(':first')
-        .css('width', '30px')
-        .find('i')
-        .css('opacity', '1');
-    });
-
-  $('li')
-    .last()
-    .on('mouseleave', function() {
-      $(this)
-        .children(':first')
-        .css('width', '0')
-        .find('i')
-        .css('opacity', '0');
-    });
 }
 
 // Append the todos to the list
