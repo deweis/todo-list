@@ -1,30 +1,27 @@
 todos = [
-  'CSS: Margin, Padding, Float',
   'jQuery: create element, event delegation',
-  'CSS: box-shadow, transition'
+  'put cdns to lib',
+  'task 2',
+  'task 3',
+  'task 4'
 ];
+
+// Add click listeners
+$('ul').on('click', 'li div.todo', function(e) {
+  $(this).toggleClass('done');
+});
+
+$('ul').on('click', 'li div.trash-icon', function(e) {
+  $(this)
+    .parent()
+    .remove();
+});
 
 function appendTodo(todo) {
   $('ul').append(
     `<li><div class="trash-icon"><i class="far fa-trash-alt"></i></div><div class="todo">${todo}</div></li>`
   );
-  addClickListeners();
   addMouseListeners();
-}
-
-function addClickListeners() {
-  $('li div.todo')
-    .last()
-    .on('click', function(e) {
-      $(this).toggleClass('done');
-    });
-  $('li div.trash-icon')
-    .last()
-    .on('click', function(e) {
-      $(this)
-        .parent()
-        .remove();
-    });
 }
 
 function addMouseListeners() {
