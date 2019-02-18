@@ -1,10 +1,4 @@
-todos = [
-  'jQuery: create element, event delegation',
-  'put cdns to lib',
-  'task 2',
-  'task 3',
-  'task 4'
-];
+todos = ['task 1', 'task 2', 'task 3', 'task 4'];
 
 // Add click listener on ul using event delegation
 $('ul').on('click', 'li div.todo', function(e) {
@@ -41,7 +35,7 @@ function appendTodo(todo) {
   );
 }
 
-// Append the todos to the list
+// Append the existing todos to the list
 todos.forEach(x => appendTodo(x));
 
 // Add a new task
@@ -61,7 +55,6 @@ $('input').on('keypress', function(e) {
 
 // Toggle Input field
 $('.input-toggle').on('click', function(e) {
-  // $('input').slideToggle(500);
   $('input').fadeToggle(700);
   $('.input-container').slideToggle(800);
   $('.input-toggle i').toggleClass('fa-minus');
