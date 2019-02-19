@@ -13,7 +13,17 @@ $('ul').on('click', 'li div.trash-icon', function(e) {
   e.stopPropagation(); // so event is not propagated up the chain
   $(this)
     .parent()
-    .fadeOut(400, () => $(this).remove());
+    .fadeOut(400, function() {
+      $(this).remove();
+    });
+
+  setTimeout(function() {
+    $('ul li').css('background', '#eeeeee'); /* grey lighten-3 */
+  }, 410);
+
+  setTimeout(function() {
+    $('ul li:nth-child(odd)').css('background', 'white');
+  }, 420);
 });
 
 // Add mouse listener on ul using event delegation
