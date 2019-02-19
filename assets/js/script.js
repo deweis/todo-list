@@ -1,6 +1,10 @@
 todos = ['task 1', 'task 2', 'task 3', 'task 4'];
 
-// Add click listener on ul using event delegation
+/**
+ *  Add click listener on ul using event delegation
+ *  --> I.e. that adds the listener to existing as well
+ *  as not yet created li's
+ * */
 $('ul').on('click', 'li div.todo', function(e) {
   $(this).toggleClass('done');
 });
@@ -44,13 +48,12 @@ $('input').on('click', function(e) {
   $(this).css('color', 'blue');
 });
 
-$('input').on('keypress', function(e) {
-  var code = e.keyCode || e.which;
-  if (code === 13) {
-    const todo = $('input').val();
+$('input[type="text"]').on('keypress', function(e) {
+  if (e.which === 13) {
+    const todo = $(this).val();
     todos.push(todo);
     appendTodo(todo);
-    $('input').val('');
+    $(this).val('');
   }
 });
 
