@@ -26,23 +26,6 @@ $('ul').on('click', 'li div.trash-icon', function(e) {
   }, 420);
 });
 
-// Add mouse listener on ul using event delegation
-$('ul').on('mouseenter', 'li', function() {
-  $(this)
-    .children(':first')
-    .css('width', '40px')
-    .find('i')
-    .css('opacity', '1');
-});
-
-$('ul').on('mouseleave', 'li', function() {
-  $(this)
-    .children(':first')
-    .css('width', '0')
-    .find('i')
-    .css('opacity', '0');
-});
-
 // append a todo to the ul
 function appendTodo(todo) {
   $('ul').append(

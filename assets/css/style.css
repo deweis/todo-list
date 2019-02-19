@@ -73,6 +73,14 @@ li {
   align-items: center;
 }
 
+li:hover .trash-icon {
+  width: 40px;
+}
+
+li:hover .fa-trash-alt {
+  opacity: 1;
+}
+
 .trash-icon {
   background: red;
   color: white;
