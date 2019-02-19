@@ -1,4 +1,4 @@
-todos = ['task 1', 'task 2', 'task 3', 'task 4'];
+todos = ['Task 1', 'Task 2', 'Task 3', 'Task 4'];
 
 /**
  *  Add click listener on ul using event delegation
@@ -20,7 +20,7 @@ $('ul').on('click', 'li div.trash-icon', function(e) {
 $('ul').on('mouseenter', 'li', function() {
   $(this)
     .children(':first')
-    .css('width', '30px')
+    .css('width', '40px')
     .find('i')
     .css('opacity', '1');
 });
@@ -44,10 +44,6 @@ function appendTodo(todo) {
 todos.forEach(x => appendTodo(x));
 
 // Add a new task
-$('input').on('click', function(e) {
-  $(this).css('color', 'blue');
-});
-
 $('input[type="text"]').on('keypress', function(e) {
   if (e.which === 13) {
     const todo = $(this).val();
