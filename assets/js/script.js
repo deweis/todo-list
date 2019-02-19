@@ -38,7 +38,7 @@ todos.forEach(x => appendTodo(x));
 
 // Add a new task
 $('input[type="text"]').on('keypress', function(e) {
-  if (e.which === 13) {
+  if (e.which === 13 && $(this).val().length > 0) {
     const todo = $(this).val();
     todos.push(todo);
     appendTodo(todo);
